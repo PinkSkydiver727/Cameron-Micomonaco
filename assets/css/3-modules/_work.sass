@@ -1,0 +1,164 @@
+
+
+.project-container
+ width: 30%
+ +transition
+ display: block
+ float: left
+ margin-left: 2.5%
+ margin-top: 2.5%
+ 
+.work-section
+ overflow: hidden
+ font-family: Heebo, sans-serif
+
+.work-slider
+ width: 100%
+ position: relative
+ left: 0%
+ +transition
+
+.thumbnail-wrap
+ width: 90%
+ margin: 0 auto
+ 
+ .work-close
+  +size(60px)
+  background-image: url(../img/closeIcon.png)
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  position: fixed
+  right: 30px
+  top: 50px
+  z-index: 1
+  cursor: pointer
+  opacity: 0.5
+  &:hover
+   opacity: 1 
+ 
+h3
+ color: rgba(0,0,0,0.7)
+ font:
+  size: 24px
+  weight: 700
+ text-transform: uppercase
+ margin: 0 auto
+ text-align: center
+ padding-top: 30px
+ 
+.thumbnail-section
+ border: 5px solid rgba(10, 10, 10, 0.4)
+ 
+ max-width: 1300px
+ margin: 0px auto
+ padding-bottom: 2.5%
+ +clearfix
+
+
+ 
+.thumbnail
+ padding-top: 100%
+ display: block
+ width: 100%
+ float: left
+ position: relative
+ overflow: hidden
+ max-width: 100%
+ background-position: center center
+ background-repeat: no-repeat
+ background-size: cover
+ +transition
+ .thumbnail-overlay 
+  +position(absolute, 0% 0px null 0px)
+  background: fade-out(rgba(10, 10, 10, 0.0), 0.0)
+  color: fade-out(rgba(10, 10, 10, 0.0), 0.0)
+  +transition
+  strong
+   display: block
+   padding: 20px
+   font-size: 20px
+   text-align: center
+ &:hover .thumbnail-overlay
+  height: 100%
+  background: fade-out(rgba(10, 10, 10, 0.8), 0.0)
+  color: fade-out(rgba(255, 255, 255, 1.0), 0.0)
+  
+.work-container
+ max-width: 1300px
+ margin: 0px auto
+ text-align: center
+ +transition
+ img
+  max-width: 100%
+ 
+ 
+.synth-info
+ +transition
+ text-align: center
+  
+.synth-picture
+ margin: 15px
+ margin-left: 10%
+ margin-right: 5%
+ width: 30%
+ padding-top: 30%
+ float: left 
+ background-image: url(../img/SyntheticaSetupPic.png)
+ background-position: center center
+ background-repeat: no-repeat
+ background-size: cover
+
+.info-container
+ text-align: left
+ margin: 15px
+
+.roid-picture
+ margin: 15px
+ margin-left: 10%
+ margin-right: 5%
+ width: 30%
+ padding-top: 30%
+ float: left 
+ background-image: url(../img/AsteroidDemo.gif)
+ background-position: center center
+ background-repeat: no-repeat
+ background-size: cover
+ 
+.other-vid
+ position: relative
+ height: 0px 
+ margin: 15px
+ margin-left: 10%
+ margin-right: 5%
+ width: 30%
+ padding-bottom: 20%
+ float: left
+
+ 
+p
+ margin: 15px
+ font-size: 16px
+ 
+.demo-gifs
+ width: 80%
+ margin: auto
+ img
+  width: 45% /* you can use % */
+  height: auto
+  float: left
+  
+.state-machine
+ float: left 
+ margin-left: 15%
+ width: 70%
+ padding-top: 30%
+ background-image: url(../img/SyntheticaStateMachine.PNG)
+ background-position: center center
+ background-repeat: no-repeat
+ background-size: cover
+
+h2
+ text-align: center
+ color: rgba(0,0,0,0.7)
+ 
