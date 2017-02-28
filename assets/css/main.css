@@ -332,10 +332,9 @@ header {
 }
 /* CSS Document */
 footer {
-  background: url(../img/headerBackground.png);
-  background-size: cover; }
+  background: url(../img/headerBackground.jpg); }
   footer .lockup {
-    padding: 20px 20px; }
+    padding: 5px 5px; }
     footer .lockup:after {
       content: "";
       display: table;
@@ -344,7 +343,7 @@ footer {
       float: left; }
     footer .lockup .shoutout {
       font-family: Heebo, sans-serif;
-      font-size: 16px;
+      font-size: 14px;
       margin: 0;
       color: white; }
       footer .lockup .shoutout a {
@@ -352,6 +351,10 @@ footer {
         footer .lockup .shoutout a:hover {
           color: #c8c8c8; }
 
+@media screen and (max-width: 800px) {
+  footer .lockup .shoutout {
+      font-size: 2vw; }
+}
 /* CSS Document */
 h3 {
   color: rgba(0, 0, 0, 0.7);
