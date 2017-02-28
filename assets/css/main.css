@@ -249,7 +249,8 @@ header {
   top: 0px;
   height: 1000px;
   background: url(../img/headerBackground.jpg);
-  background-size: cover; } 
+  background-size: cover;  
+  min-width: 100%; } 
   header h1 {
     margin: 0;
     /*margin-left: 15%;*/
