@@ -236,8 +236,9 @@ body {
   background-color: rgba(255, 255, 255, 0.5); }
   .nav a {
     margin: 10px;
+    font-size: 20px;
+    
     color: rgba(0, 0, 0, 0.7);
-    font-size: 22px;
     font-weight: 700;
     text-transform: uppercase; }
     .nav a:hover {
@@ -246,12 +247,12 @@ body {
 header {
   font-family: Heebo, sans-serif;
   top: 0px;
-  height: 850px;
-  background: url(../img/headerBackground.png);
-  background-size: cover; }
+  height: 1000px;
+  background: url(../img/headerBackground.jpg);
+  background-size: cover; } 
   header h1 {
     margin: 0;
-    margin-left: 15%;
+    /*margin-left: 15%;*/
     text-align: center;
     font-size: 56px;
     font-weight: 700;
@@ -259,25 +260,76 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.03;
     clear: both;
-    padding-top: 155px; }
+    padding-top: 105px; }
     header h1 span {
       display: inline-block;
-      padding: 16px;
+      padding: 10px;
       background-color: rgba(255, 255, 255, 0.5);
       border: white solid 2px; }
   header .tagline {
-    margin-left: 15%;
+    /*margin-left: 15%;*/
     text-align: center;
     font-weight: 700;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 0.03;
-    padding-bottom: 30px; }
+    padding-bottom: 10px; }
 
-@media screen and (max-width: 650px) {
+.headerabout {
+  margin-top: -700px;
+  height: 250px;
+  width: 53%; 
+  margin-left: 45%; }
+.education {
+  height: 450px;
+  width: 53%;
+  margin-left: 45%; }
+
+
+@media screen and (max-width: 1400px) {
+  .headerabout{
+    margin-top: 20px;
+    height: auto;
+    width: 97%; 
+    margin-left: 1.5%; }
+  .education {
+    height: auto;
+    width: 97%; 
+    margin-left: 1.5%; }
+    .intro {
+      width: 90%;
+      margin: 0 auto; }
+}
+
+@media screen and (max-width: 550px) {
+  .headerabout {
+    padding-top: 30px; }
+  header{
+    height: 200px; }
+    header h1 span {
+      border: none;
+      background-color: rgba(0, 0, 0, 0); }
+    header h1 {
+      padding-top: 200px; }
+    header .tagline {
+      color: rgba(0, 0, 0, 0); }
+  .intro {
+    font-size: 14px;
+  }
   .nav {
     top: 0px;
-    background-color: white; } }
+    left: 0px;
+    background-color: white; 
+    width: 100%; }
+    .nav #about-button {
+      text-align: center;
+      font-size: 14px;
+      display: block;
+      float: left;
+      width: 33%;
+      margin: 0; 
+      color: #CB0B0E; }
+}
 /* CSS Document */
 footer {
   background: url(../img/headerBackground.png);
@@ -316,7 +368,7 @@ h4 {
   text-align: left;
   margin: 10px; }
 
-.face-section {
+.skills-section {
   font-family: Heebo, sans-serif;
   padding: 30px 0 30px;
   max-width: 1100px;
@@ -346,16 +398,11 @@ h4 {
   -o-justify-content: space-around;
   justify-content: space-around;
   -ms-flex-pack: center; }
-  .face-section .headshot-image {
-    height: 350px;
-    width: 350px;
-    background: url(../img/aboutmeHeadshot.png);
-    order: 1; }
-  .face-section .about-me {
+  .skills-section .about-me {
     text-align: center;
     width: 100%;
     order: 2; }
-    .face-section .about-me .intro {
+    .skills-section .about-me .intro {
       padding: 0 1.5%;
       width: 30%;
       text-align: left;
@@ -367,16 +414,18 @@ h4 {
       margin-left: 10%;
       color: rgba(0, 0, 0, 0.7); }
 
-@media screen and (max-width: 1000px) {
-  .face-section {
-    display: block;
+@media screen and (max-width: 550px) {
+  .skills-section .about-me .intro {
+    font-size: 14px;
+    float: none; 
+    width: 90%; 
     text-align: center; }
-
-  .headshot-image {
-    margin: 0 auto; }
-
-  .about-me {
-    margin: 0 auto; } }
+  .skills-section .about-me h4 {
+    text-align: center;
+    width: auto;
+  }
+    
+}
 .project-container {
   width: 30%;
   -webkit-transition: all 0.15s ease-out 0s;
@@ -424,7 +473,7 @@ h3 {
   text-transform: uppercase;
   margin: 0 auto;
   text-align: center;
-  padding-top: 30px; }
+  padding-top: 10px; }
 
 .thumbnail-section {
   border: 5px solid rgba(10, 10, 10, 0.4);
