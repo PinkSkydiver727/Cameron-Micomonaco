@@ -267,7 +267,8 @@ header {
       background-color: rgba(255, 255, 255, 0.5);
       border: white solid 2px; }
   header .tagline {
-    /*margin-left: 15%;*/
+    /* remove line below to add tagline back in */
+    color: rgba(0, 0, 0, 0);
     text-align: center;
     font-weight: 700;
     font-size: 20px;
@@ -323,12 +324,11 @@ header {
     width: 100%; }
     .nav #about-button {
       text-align: center;
-      font-size: 14px;
+      font-size: 18px;
       display: block;
       float: left;
       width: 33%;
-      margin: 0; 
-      color: #CB0B0E; }
+      margin: 0; }
 }
 /* CSS Document */
 footer {
