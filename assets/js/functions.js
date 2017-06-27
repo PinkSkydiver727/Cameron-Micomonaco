@@ -32,10 +32,12 @@ $(window).scroll(function() {                  // assign scroll event listener
 $(function()
 {
   slideAnimation();
+  $('.mech-info').hide();
   $('.synth-info').hide();
   $('.tilt-info').hide();
   $('.other-info').hide();
     $('.work-close').hide(); 
+    $('.hippo-info').hide();
   
   $("header h1").fitText(1.2, { minFontSize: '20px', maxFontSize: '72px' });
   
@@ -43,74 +45,120 @@ $(function()
 
 function slideAnimation()
 {
+    $('#mech-thumb').click(function(){
+    $('.project-container').css('margin-left', '0');
+    $('.main-project-container').css('margin-left', '0');
+    $('#mech-thumb').css('margin', '2.5%');
+    $('#mech-thumb').css('width', '95%');
+    $('.work-close').show(500);
+    $('.thumbnail').css('padding-top', '30%');
+    $('.thumbnail-large').css('padding-top', '30%');
+    
+    $('#synth-thumb').css('width', '0%');
+    $('#tilt-thumb').css('width', '0%');
+    $('#hippo-thumb').css('width', '0%');
+    $('#other-thumb').css('width', '0%');
+    $('.mech-info').show();
+  });
+  
+  
   $('#synth-thumb').click(function(){
     $('.project-container').css('margin-left', '0');
+    $('.main-project-container').css('margin-left', '0');
     $('#synth-thumb').css('margin', '2.5%');
     $('#synth-thumb').css('width', '95%');
     $('.work-close').show(500);
     $('.thumbnail').css('padding-top', '30%');
+    $('.thumbnail-large').css('padding-top', '30%');
+    $('#mech-thumb').css('width', '0%');
     $('#tilt-thumb').css('width', '0%');
-    $('#loft-thumb').css('width', '0%');
-    $('#whatthepuck-thumb').css('width', '0%');
-    $('#fps-thumb').css('width', '0%');
+    $('#hippo-thumb').css('width', '0%');
     $('#other-thumb').css('width', '0%');
     $('.synth-info').show();
   });
   
   $('#tilt-thumb').click(function(){
     $('.project-container').css('margin-left', '0');
+    $('.main-project-container').css('margin-left', '0');
     $('#tilt-thumb').css('margin', '2.5%');
     $('#tilt-thumb').css('width', '95%');
     $('.work-close').show(500);
     $('.thumbnail').css('padding-top', '30%');
+    $('.thumbnail-large').css('padding-top', '30%');
     $('#synth-thumb').css('width', '0%');
-    $('#loft-thumb').css('width', '0%');
-    $('#whatthepuck-thumb').css('width', '0%');
-    $('#fps-thumb').css('width', '0%');
+    $('#mech-thumb').css('width', '0%');
+    $('#hippo-thumb').css('width', '0%');
     $('#other-thumb').css('width', '0%');
     $('.tilt-info').show();
     
   });
   
-  $('#loft-thumb').click(function(){
+  
+    $('#hippo-thumb').click(function(){
     $('.project-container').css('margin-left', '0');
-    $('#loft-thumb').css('margin', '2.5%');
-    $('#loft-thumb').css('width', '95%');
+    $('.main-project-container').css('margin-left', '0');
+    $('#hippo-thumb').css('margin', '2.5%');
+    $('#hippo-thumb').css('width', '95%');
     $('.work-close').show(500);
     $('.thumbnail').css('padding-top', '30%');
-    $('#tilt-thumb').css('width', '0%');
+    $('.thumbnail-large').css('padding-top', '30%');
+    
+    $('#mech-thumb').css('width', '0%');
     $('#synth-thumb').css('width', '0%');
-    $('#whatthepuck-thumb').css('width', '0%');
-    $('#fps-thumb').css('width', '0%');
+    $('#tilt-thumb').css('width', '0%');
     $('#other-thumb').css('width', '0%');
+    $('.hippo-info').show();
+  });
+  
+    $('#other-thumb').click(function(){
+    $('.project-container').css('margin-left', '0');
+    $('.main-project-container').css('margin-left', '0');
+    $('#other-thumb').css('margin', '2.5%');
+    $('#other-thumb').css('width', '95%');
+    $('.work-close').show(500);
+    $('.thumbnail').css('padding-top', '30%');
+    $('.thumbnail-large').css('padding-top', '30%');
+    
+    $('#mech-thumb').css('width', '0%');
+    $('#synth-thumb').css('width', '0%');
+    $('#tilt-thumb').css('width', '0%');
+    $('#hippo-thumb').css('width', '0%');
     $('.other-info').show();
   });
   
+  
+  
   $('.work-close').click(function() {
+    $('#mech-thumb').css('margin', '0');
     $('#synth-thumb').css('margin', '0');
     $('#tilt-thumb').css('margin', '0');
-    $('#loft-thumb').css('margin', '0');
-    $('#whatthepuck-thumb').css('margin', '0');
-    $('#fps-thumb').css('margin', '0');
+    $('#hippo-thumb').css('margin', '0');
     $('#other-thumb').css('margin', '0');
     
     $('.project-container').css('margin-top', '2.5%');
     $('.project-container').css('margin-left', '2.5%');
+    $('.main-project-container').css('margin-top', '2.5%');
+    $('.main-project-container').css('margin-left', '2.5%');
     
-    $('.thumbnail').css('padding-top', '100%');
-    $('#synth-thumb').css('width', '30%');
-    $('#synth-thumb').css('width', '30%');
+    $('.thumbnail').css('padding-top', '100%'); 
+    $('.thumbnail-large').css('padding-top', '63%');
+    
+    $('#synth-thumb').css('width', '47%');
+    $('#mech-thumb').css('width', '47%');
     $('#tilt-thumb').css('width', '30%');
-    $('#loft-thumb').css('width', '30%');
-    $('#whatthepuck-thumb').css('width', '30%');
-    $('#fps-thumb').css('width', '30%');
     $('#other-thumb').css('width', '30%');  
+    $('#hippo-thumb').css('width', '30%');  
     
-    
+    $('.mech-info').hide();
     $('.synth-info').hide();
     $('.tilt-info').hide();
     $('.other-info').hide();
+    $('.hippo-info').hide();
     $('.work-close').hide(500);  
+    
+    //scroll 
+    $('html, body').animate({
+        scrollTop: $('#work-div').offset().top }, 600);
     
     $("iframe").each(function() { 
       var src= $(this).attr('src');
